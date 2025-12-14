@@ -2,6 +2,8 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 
+export const revalidate = 60;
+
 // Das ist die "Bestellung" an die Küche (Query)
 // Wir sagen: "Hol mir das Dokument vom Typ 'testPage'. Und zwar das erste ([0]), das du findest."
 const QUERY = `*[_type == "testPage"][0] {

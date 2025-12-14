@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e09ea2a-8e35-42a8-934e-c0ca64e0d9c2" name="Changes" comment="fix: added KEYs">
-      <change afterPath="$PROJECT_DIR$/app/test/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sanity/lib/client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sanity/lib/image.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sanity/schemaTypes/testPage.ts" afterDir="false" />
+    <list default="true" id="3e09ea2a-8e35-42a8-934e-c0ca64e0d9c2" name="Changes" comment="added: test page for sanity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/schemaTypes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemaTypes/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765732176302</updated>
-      <workItem from="1765732177911" duration="7005000" />
+      <workItem from="1765732177911" duration="7859000" />
     </task>
     <task id="LOCAL-00001" summary="fix: sanity files missing">
       <option name="closed" value="true" />
@@ -122,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765739892236</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added: test page for sanity">
+      <option name="closed" value="true" />
+      <created>1765741955159</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765741955159</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +135,7 @@
     <MESSAGE value="fix: keene ahnung was der Fehler war" />
     <MESSAGE value="fix: hoffentlich /studio fix" />
     <MESSAGE value="fix: added KEYs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: added KEYs" />
+    <MESSAGE value="added: test page for sanity" />
+    <option name="LAST_COMMIT_MESSAGE" value="added: test page for sanity" />
   </component>
 </project>
