@@ -1,19 +1,21 @@
-/**
- * This route is responsible for the built-in authoring environment using Sanity Studio.
- * All routes under your studio path is handled by this file using Next.js' catch-all routes:
- * https://nextjs.org/docs/routing/dynamic-routes#catch-all-routes
- *
- * You can learn more about the next-sanity package here:
- * https://github.com/sanity-io/next-sanity
- */
+import { NextStudio } from 'next-sanity/studio';
+import config from '../../../sanity.config'; // Pfad anpassen!
+import type { Metadata, Viewport } from 'next';
 
-import { NextStudio } from 'next-sanity/studio'
-import config from '../../../sanity.config'
+// WICHTIG: Verhindert Static Generation / SSR Versuche für diese Route
+export const dynamic = 'force-static';
 
-export const dynamic = 'force-static'
+export const metadata: Metadata = {
+    title: 'Lindas Art Studio',
+    robots: { index: false, follow: false }, // Studio nicht indexieren
+};
 
-export { metadata, viewport } from 'next-sanity/studio'
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+};
 
 export default function StudioPage() {
-  return <NextStudio config={config} />
+    return <NextStudio config={config} />;
 }
