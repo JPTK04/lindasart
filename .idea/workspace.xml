@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e09ea2a-8e35-42a8-934e-c0ca64e0d9c2" name="Changes" comment="fix: hoffentlich /studio fix">
+    <list default="true" id="3e09ea2a-8e35-42a8-934e-c0ca64e0d9c2" name="Changes" comment="fix: added KEYs">
+      <change afterPath="$PROJECT_DIR$/app/test/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sanity/lib/client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sanity/lib/image.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sanity/schemaTypes/testPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/studio/[[...tool]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/studio/[[...tool]]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/schemaTypes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemaTypes/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +38,9 @@
   "associatedIndex": 3
 }]]></component>
   <component name="ProjectId" id="36qRaAUYiXSTB2rhucRwSonrnkV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -81,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765732176302</updated>
-      <workItem from="1765732177911" duration="5462000" />
+      <workItem from="1765732177911" duration="7005000" />
     </task>
     <task id="LOCAL-00001" summary="fix: sanity files missing">
       <option name="closed" value="true" />
@@ -107,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765736265827</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: added KEYs">
+      <option name="closed" value="true" />
+      <created>1765739892236</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765739892236</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +132,7 @@
     <MESSAGE value="fix: sanity files missing" />
     <MESSAGE value="fix: keene ahnung was der Fehler war" />
     <MESSAGE value="fix: hoffentlich /studio fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: hoffentlich /studio fix" />
+    <MESSAGE value="fix: added KEYs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: added KEYs" />
   </component>
 </project>
