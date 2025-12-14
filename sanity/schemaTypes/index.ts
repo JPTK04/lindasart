@@ -1,6 +1,7 @@
 ﻿import { type SchemaTypeDefinition } from 'sanity'
-import { testPage } from './testPage' // <--- Importieren
+import { testPage } from './testPage'
+import { homepage } from './homepage' // <--- NEU: Importieren
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-    types: [testPage], // <--- Hier in die Liste eintragen
+    types: [testPage, homepage], // <--- NEU: Beides in die Liste eintragen (mit Komma getrennt)
 }

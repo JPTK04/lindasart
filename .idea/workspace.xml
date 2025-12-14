@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e09ea2a-8e35-42a8-934e-c0ca64e0d9c2" name="Changes" comment="added: test page for sanity">
+    <list default="true" id="3e09ea2a-8e35-42a8-934e-c0ca64e0d9c2" name="Changes" comment="fix: reload test page every 60sec">
+      <change afterPath="$PROJECT_DIR$/sanity/schemaTypes/homepage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/schemaTypes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemaTypes/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765732176302</updated>
-      <workItem from="1765732177911" duration="7859000" />
+      <workItem from="1765732177911" duration="9637000" />
     </task>
     <task id="LOCAL-00001" summary="fix: sanity files missing">
       <option name="closed" value="true" />
@@ -124,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765741955159</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: reload test page every 60sec">
+      <option name="closed" value="true" />
+      <created>1765742625987</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765742625987</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +147,7 @@
     <MESSAGE value="fix: hoffentlich /studio fix" />
     <MESSAGE value="fix: added KEYs" />
     <MESSAGE value="added: test page for sanity" />
-    <option name="LAST_COMMIT_MESSAGE" value="added: test page for sanity" />
+    <MESSAGE value="fix: reload test page every 60sec" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: reload test page every 60sec" />
   </component>
 </project>
