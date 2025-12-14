@@ -1,16 +1,26 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    // 1. Verhindert, dass Vercel versucht, jsdom/canvas zu tracen
+    // WICHTIG: Webpack nutzen, wie du es wolltest
+    // (wird über dein script "next build --webpack" sowieso forciert, aber hier zur Sicherheit)
+
+    // 1. Zwinge Next.js, diese Pakete neu zu bündeln, um ESM/CJS Konflikte zu lösen
+    transpilePackages: ['next-sanity', 'isomorphic-dompurify', 'jsdom', 'parse5'],
+
+    // 2. Falls du vorher 'serverComponentsExternalPackages' gesetzt hast:
+    // PROBIERE ES BITTE ERST OHNE. Wenn diese Option aktiv ist, verursacht sie oft genau diesen ESM-Fehler.
     experimental: {
-        serverComponentsExternalPackages: ['jsdom', 'isomorphic-dompurify'],
+        // serverComponentsExternalPackages: ['jsdom'], // <-- Auskommentieren oder löschen!
     },
+
     webpack: (config) => {
-        // 2. Ersetzt jsdom durch ein leeres Modul, falls es client-seitig oder im SSR-Bundle auftaucht
+        // Verhindert, dass Webpack versucht, diese Pakete für den Browser zu bündeln,
+        // falls sie versehentlich dort landen.
         config.resolve.alias = {
             ...config.resolve.alias,
-            "jsdom": false,
-            "isomorphic-dompurify": false, // Optional, falls jsdom allein nicht reicht
+            "isomorphic-dompurify": false,
+            // jsdom NICHT hier false setzen, wenn transpilePackages genutzt wird,
+            // sonst beißt sich das eventuell.
         };
         return config;
     },

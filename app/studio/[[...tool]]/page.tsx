@@ -1,21 +1,19 @@
-import { NextStudio } from 'next-sanity/studio';
-import config from '../../../sanity.config'; // Pfad anpassen!
-import type { Metadata, Viewport } from 'next';
+'use client'
 
-// WICHTIG: Verhindert Static Generation / SSR Versuche für diese Route
-export const dynamic = 'force-static';
+import { type NextStudio } from 'next-sanity/studio'
+import dynamic from 'next/dynamic'
+import config from '../../../sanity.config'
 
-export const metadata: Metadata = {
-    title: 'Lindas Art Studio',
-    robots: { index: false, follow: false }, // Studio nicht indexieren
-};
-
-export const viewport: Viewport = {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-};
+// Lade das Studio-Modul erst im Browser.
+// Der Server sieht nur "Loading..." und fasst jsdom/parse5 gar nicht an.
+const Studio = dynamic(
+    () => import('next-sanity/studio').then((mod) => mod.NextStudio),
+    {
+        ssr: false,
+        loading: () => <div>Studio wird geladen...</div>
+    }
+)
 
 export default function StudioPage() {
-    return <NextStudio config={config} />;
+    return <Studio config={config} />
 }
