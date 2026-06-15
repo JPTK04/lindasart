@@ -19,8 +19,13 @@ export const structure: StructureResolver = (S) =>
             .documentId('about')
         ),
       S.divider(),
-      S.documentTypeListItem('series').title('Foto Serien'),
-      S.documentTypeListItem('work').title('Websites (Work)'),
+      S.listItem()
+        .title('Websites (Work)')
+        .child(
+          S.document()
+            .schemaType('workPage')
+            .documentId('workPage')
+        ),
       S.divider(),
       S.listItem()
         .title('Einstellungen (Footer)')

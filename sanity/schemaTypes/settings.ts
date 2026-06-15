@@ -26,5 +26,11 @@ export const settings = defineType({
       title: 'Instagram URL',
       type: 'url',
     }),
+    defineField({
+      name: 'address',
+      title: 'Studio Address',
+      type: 'text',
+      description: 'The studio address displayed in the footer. You can use multiple lines.',
+    }),
   ],
 })

@@ -19,11 +19,6 @@ export const homePage = defineType({
       type: 'array',
       of: [
         { type: 'editorialModule' },
-        {
-          type: 'reference',
-          to: [{ type: 'series' }],
-          title: 'Series Link',
-        },
       ],
     }),
   ],

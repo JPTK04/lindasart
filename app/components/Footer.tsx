@@ -31,9 +31,17 @@ export default function Footer({ settings }: { settings: any }) {
           {/* Column 2: Studio Address */}
           <div className="leading-tight">
             <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-900">Studio</h4>
-            <p className="text-gray-600">Portraitatelier | Grünes Studio</p>
-            <p className="text-gray-600">Brandenburgstraße 59</p>
-            <p className="text-gray-600">14612 Falkensee</p>
+            {settings?.address ? (
+              <div className="text-gray-600 whitespace-pre-wrap">
+                {settings.address}
+              </div>
+            ) : (
+              <>
+                <p className="text-gray-600">Portraitatelier | Grünes Studio</p>
+                <p className="text-gray-600">Brandenburgstraße 59</p>
+                <p className="text-gray-600">14612 Falkensee</p>
+              </>
+            )}
           </div>
         </div>
 
