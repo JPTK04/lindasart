@@ -58,11 +58,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-2 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-0 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
-                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-500 mt-4 group-hover/link:text-gray-900 transition-colors">
+                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-500 mt-2 group-hover/link:text-gray-900 transition-colors">
                     Zur Galerie
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
                       <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -101,11 +101,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-2 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-0 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
-                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-500 mt-4 group-hover/link:text-gray-900 transition-colors">
+                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-500 mt-2 group-hover/link:text-gray-900 transition-colors">
                     Zur Galerie
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
                       <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -146,11 +146,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-2 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-0 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
-                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-500 mt-4 group-hover/link:text-gray-900 transition-colors">
+                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-500 mt-2 group-hover/link:text-gray-900 transition-colors">
                     Zur Galerie
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
                       <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -189,11 +189,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-2 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-0 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
-                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-500 mt-4 group-hover/link:text-gray-900 transition-colors">
+                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-500 mt-2 group-hover/link:text-gray-900 transition-colors">
                     Zur Galerie
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
                       <line x1="7" y1="17" x2="17" y2="7"></line>
