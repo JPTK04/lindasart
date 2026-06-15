@@ -1,51 +1,40 @@
-import {defineField, defineType} from 'sanity'
+import { defineType, defineField } from 'sanity'
 
-export const homepage = defineType({
-    name: 'homepage',
-    title: 'Startseite',
-    type: 'document',
-    fields: [
-        // 1. Der obere Bereich (Hero)
-        defineField({
-            name: 'headline',
-            title: 'Große Überschrift (Name)',
-            type: 'string',
-        }),
-        defineField({
-            name: 'subline',
-            title: 'Untertitel (z.B. "Photography")',
-            type: 'string',
-        }),
-        defineField({
-            name: 'heroImage',
-            title: 'Hero Bild (Ganz oben)',
-            type: 'image',
-            options: { hotspot: true },
-            fields: [{name: 'alt', title: 'Alt Text', type: 'string'}]
-        }),
-
-        // 2. Die Galerie (Array von Bildern)
-        defineField({
-            name: 'gallery',
-            title: 'Portfolio Auswahl',
-            type: 'array', // Ein Array = Liste von Dingen
-            of: [
-                {
-                    type: 'image',
-                    options: { hotspot: true },
-                    fields: [{name: 'alt', title: 'Alt Text', type: 'string'}]
-                }
-            ],
-            options: {
-                layout: 'grid' // Zeigt die Bilder im Studio schön nebeneinander an
-            }
-        }),
-
-        // 3. Footer
-        defineField({
-            name: 'footerText',
-            title: 'Footer Text (z.B. Kontakt / Impressum Link)',
-            type: 'string',
-        }),
-    ],
+export const homePage = defineType({
+  name: 'homePage',
+  title: 'Startseite',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      initialValue: 'Startseite',
+      hidden: true, // Hide it since it's a singleton and the title is always the same
+    }),
+    defineField({
+      name: 'modules',
+      title: 'Page Modules',
+      description: 'Add and arrange modules for the home page here.',
+      type: 'array',
+      of: [
+        { type: 'editorialModule' },
+        {
+          type: 'reference',
+          to: [{ type: 'series' }],
+          title: 'Series Link',
+        },
+      ],
+    }),
+  ],
+  preview: {
+    select: {
+      title: 'title',
+    },
+    prepare({ title }) {
+      return {
+        title: title || 'Startseite',
+      }
+    },
+  },
 })
