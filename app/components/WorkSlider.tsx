@@ -87,12 +87,12 @@ export default function WorkSlider({ works }: { works: any[] }) {
               <div className="w-full md:w-1/3 lg:w-1/4 flex flex-col justify-center order-2 md:order-1">
                 {hasUrl ? (
                   <a href={work.url} target="_blank" rel="noopener noreferrer" className="group/link w-fit">
-                    <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
+                    <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight transition-colors whitespace-nowrap group-hover/link:text-gray-900">
                       {work.title}
                     </h2>
                   </a>
                 ) : (
-                  <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight">
+                  <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight whitespace-nowrap">
                     {work.title}
                   </h2>
                 )}
@@ -100,6 +100,20 @@ export default function WorkSlider({ works }: { works: any[] }) {
                   <p className="font-ztneue font-bold text-gray-500 text-lg leading-relaxed mb-8 whitespace-pre-wrap">
                     {work.description}
                   </p>
+                )}
+                {hasUrl && (
+                  <a 
+                    href={work.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group/link flex items-center gap-3 text-xs font-light tracking-[0.2em] uppercase text-gray-500 hover:text-gray-900 transition-colors w-fit"
+                  >
+                    Zur Website
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
                 )}
               </div>
               
