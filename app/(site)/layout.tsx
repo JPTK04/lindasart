@@ -14,7 +14,7 @@ export default async function SiteLayout({
   return (
     <>
       <Header />
-      <main className="flex-grow pt-32">
+      <main className="flex-grow pt-[9.5rem]">
         {children}
       </main>
       <Footer settings={settings} />

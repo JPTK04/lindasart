@@ -6,18 +6,46 @@ export const workPage = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'sliderImages',
-      title: 'Slider Images',
+      name: 'featuredWorks',
+      title: 'Slider / Featured Works',
       type: 'array',
       of: [
         {
-          type: 'image',
-          options: {
-            hotspot: true,
+          type: 'object',
+          fields: [
+            {
+              name: 'title',
+              title: 'Title / Client Name',
+              type: 'string',
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: 'description',
+              title: 'Description',
+              type: 'text',
+            },
+            {
+              name: 'url',
+              title: 'Website URL',
+              type: 'url',
+            },
+            {
+              name: 'image',
+              title: 'Preview Image',
+              type: 'image',
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+          preview: {
+            select: {
+              title: 'title',
+              media: 'image',
+            },
           },
         },
       ],
-      description: 'Add images here for the slider at the top of the Work page.',
+      description: 'These works will be displayed in the large slider at the top of the page with text and links.',
     }),
     defineField({
       name: 'references',

@@ -2,49 +2,39 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 
+import WorkSlider from "../../components/WorkSlider";
+
 export const revalidate = 60;
 
 const QUERY = `*[_type == "workPage"][0] {
-  sliderImages,
+  featuredWorks,
   references
 }`;
 
 export default async function WorkPage() {
   const workData = await client.fetch(QUERY);
   const references = workData?.references || [];
-  const sliderImages = workData?.sliderImages || [];
+  const featuredWorksRaw = workData?.featuredWorks || [];
+
+  // Resolve image URLs server-side
+  const featuredWorks = featuredWorksRaw.map((work: any) => ({
+    ...work,
+    imageUrl: work.image ? urlFor(work.image).url() : null
+  }));
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-20">
+    <div className="max-w-7xl mx-auto px-6 py-20">
       
-      {/* Slider Section */}
-      {sliderImages.length > 0 && (
-        <div className="mb-32">
-          <div className="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-8 scrollbar-hide">
-            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-            {sliderImages.map((img: any, idx: number) => (
-              <div 
-                key={idx} 
-                className="flex-shrink-0 w-full md:w-[80%] lg:w-[60%] aspect-video relative snap-center bg-gray-50 overflow-hidden"
-              >
-                <Image
-                  src={urlFor(img).url()}
-                  alt={`Work Slider Image ${idx + 1}`}
-                  fill
-                  className="object-cover"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Featured Works Slider Section */}
+      <WorkSlider works={featuredWorks} />
 
       {/* References List */}
       <div className="max-w-4xl mx-auto">
-        <h1 className="font-ztneue text-4xl text-center mb-24 text-gray-900 tracking-wide">
-          Referenzen
-        </h1>
+        {references.length > 0 && (
+          <h1 className="font-ztneue text-3xl md:text-4xl text-center mb-24 text-gray-900 tracking-wide">
+            Weitere Referenzen
+          </h1>
+        )}
         
         {references.length > 0 ? (
           <div className="flex flex-col gap-10">

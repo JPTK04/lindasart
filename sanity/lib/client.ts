@@ -6,5 +6,5 @@ export const client = createClient({
     projectId,
     dataset,
     apiVersion,
-    useCdn: true, // 'true' ist schneller (Cache), 'false' ist immer brandaktuell
+    useCdn: false, // Set to false to bypass Sanity Edge Cache for faster local updates
 })
