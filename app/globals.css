@@ -27,6 +27,8 @@
   --font-mono: var(--font-geist-mono);
   --font-ztneue: "ZT Neue Ralewe", sans-serif;
   --font-sukhumvit: "Sukhumvit Set", sans-serif;
+  --color-gray-500: #8a8788;
+  --color-gray-600: #8a8788;
 }
 
 body {

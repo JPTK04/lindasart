@@ -31,7 +31,7 @@ export default async function WorkPage() {
       {/* References List */}
       <div className="max-w-4xl mx-auto">
         {references.length > 0 && (
-          <h1 className="font-ztneue text-3xl md:text-4xl text-center mb-24 text-gray-900 tracking-wide">
+          <h1 className="font-ztneue text-3xl md:text-4xl text-center mb-24 text-gray-500 tracking-wide">
             Weitere Referenzen
           </h1>
         )}
@@ -50,17 +50,17 @@ export default async function WorkPage() {
                       href={item.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="font-sukhumvit text-xl md:text-2xl text-gray-900 hover:text-gray-500 transition-colors block"
+                      className="font-sukhumvit text-xl md:text-2xl text-gray-500 hover:text-gray-900 transition-colors block"
                     >
                       {item.title}
                     </a>
                   ) : (
-                    <h2 className="font-sukhumvit text-xl md:text-2xl text-gray-900">
+                    <h2 className="font-sukhumvit text-xl md:text-2xl text-gray-500">
                       {item.title}
                     </h2>
                   )}
                   {item.description && (
-                    <p className="text-sm font-light tracking-widest text-gray-400 mt-2 uppercase">
+                    <p className="text-sm font-light tracking-widest text-gray-500 mt-2 uppercase">
                       {item.description}
                     </p>
                   )}
@@ -72,7 +72,7 @@ export default async function WorkPage() {
                       href={item.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-sm font-light tracking-widest uppercase text-gray-400 hover:text-gray-900 transition-colors"
+                      className="text-sm font-light tracking-widest uppercase text-gray-500 hover:text-gray-900 transition-colors"
                     >
                       Zur Website ↗
                     </a>
@@ -82,7 +82,7 @@ export default async function WorkPage() {
             ))}
           </div>
         ) : (
-          <div className="text-center text-gray-400 font-light">
+          <div className="text-center text-gray-500 font-light">
             Noch keine Referenzen hinterlegt. Bitte füge diese im Sanity Studio hinzu.
           </div>
         )}

@@ -43,16 +43,16 @@ export default function Header() {
         <nav className="flex gap-4 md:gap-8 text-base uppercase tracking-widest font-sukhumvit pb-1">
           <Link
             href="/work"
-            className={`transition-colors hover:opacity-70 ${
-              pathname.startsWith("/work") ? "opacity-100" : "opacity-50"
+            className={`transition-colors hover:text-gray-900 ${
+              pathname.startsWith("/work") ? "text-gray-900" : "text-gray-500"
             }`}
           >
             Work
           </Link>
           <Link
             href="/about"
-            className={`transition-colors hover:opacity-70 ${
-              pathname === "/about" ? "opacity-100" : "opacity-50"
+            className={`transition-colors hover:text-gray-900 ${
+              pathname === "/about" ? "text-gray-900" : "text-gray-500"
             }`}
           >
             About

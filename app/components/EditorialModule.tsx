@@ -54,7 +54,7 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               {/* Text underneath, exactly left-aligned */}
               <div className="mt-3 text-left">
                 <Link href={linkHref} className="group/link inline-flex flex-col items-start">
-                  <h3 className="font-ztneue font-bold text-[24px] text-gray-900 leading-tight group-hover/link:text-gray-600 transition-colors">
+                  <h3 className="font-ztneue font-bold text-[24px] text-gray-500 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
                     {title}
                   </h3>
                   {subtitle && (
@@ -62,13 +62,6 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                       {subtitle}
                     </p>
                   )}
-                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-400 mt-3 group-hover/link:text-gray-900 transition-colors">
-                    Zur Galerie
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </div>
                 </Link>
               </div>
             </div>
@@ -143,7 +136,7 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               {/* Text underneath, exactly right-aligned */}
               <div className="mt-3 text-right flex justify-end">
                 <Link href={linkHref} className="group/link inline-flex flex-col items-end">
-                  <h3 className="font-ztneue font-bold text-[24px] text-gray-900 leading-tight group-hover/link:text-gray-600 transition-colors">
+                  <h3 className="font-ztneue font-bold text-[24px] text-gray-500 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
                     {title}
                   </h3>
                   {subtitle && (
@@ -151,13 +144,6 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                       {subtitle}
                     </p>
                   )}
-                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-400 mt-3 group-hover/link:text-gray-900 transition-colors">
-                    Zur Galerie
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </div>
                 </Link>
               </div>
             </div>

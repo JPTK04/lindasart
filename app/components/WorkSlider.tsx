@@ -35,7 +35,7 @@ export default function WorkSlider({ works }: { works: any[] }) {
         <div className="absolute top-[50%] -translate-y-1/2 left-0 right-0 z-10 hidden md:flex justify-between pointer-events-none px-0 md:-mx-8">
           <button 
             onClick={() => scroll("left")}
-            className="w-12 h-16 flex items-center justify-center text-gray-300 hover:text-gray-900 transition-colors pointer-events-auto"
+            className="w-12 h-16 flex items-center justify-center text-gray-400 hover:text-gray-900 transition-colors pointer-events-auto"
             aria-label="Previous slide"
           >
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.75" strokeLinecap="square" strokeLinejoin="miter">
@@ -44,7 +44,7 @@ export default function WorkSlider({ works }: { works: any[] }) {
           </button>
           <button 
             onClick={() => scroll("right")}
-            className="w-12 h-16 flex items-center justify-center text-gray-300 hover:text-gray-900 transition-colors pointer-events-auto"
+            className="w-12 h-16 flex items-center justify-center text-gray-400 hover:text-gray-900 transition-colors pointer-events-auto"
             aria-label="Next slide"
           >
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.75" strokeLinecap="square" strokeLinejoin="miter">
@@ -58,7 +58,7 @@ export default function WorkSlider({ works }: { works: any[] }) {
       <div 
         ref={scrollRef}
         onScroll={handleScroll}
-        className="flex overflow-x-auto gap-8 snap-x snap-mandatory pb-8 scrollbar-hide"
+        className="flex overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {works.map((work, idx) => {
@@ -85,27 +85,21 @@ export default function WorkSlider({ works }: { works: any[] }) {
             >
               {/* Text Container - Left side */}
               <div className="w-full md:w-1/3 lg:w-1/4 flex flex-col justify-center order-2 md:order-1">
-                <h2 className="font-ztneue text-2xl md:text-3xl lg:text-4xl text-gray-900 mb-4 leading-tight">
-                  {work.title}
-                </h2>
+                {hasUrl ? (
+                  <a href={work.url} target="_blank" rel="noopener noreferrer" className="group/link w-fit">
+                    <h2 className="font-ztneue text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
+                      {work.title}
+                    </h2>
+                  </a>
+                ) : (
+                  <h2 className="font-ztneue text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight">
+                    {work.title}
+                  </h2>
+                )}
                 {work.description && (
-                  <p className="text-gray-400 font-light leading-relaxed mb-8 whitespace-pre-wrap">
+                  <p className="text-gray-500 font-light leading-relaxed mb-8 whitespace-pre-wrap">
                     {work.description}
                   </p>
-                )}
-                {hasUrl && (
-                  <a 
-                    href={work.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group/link flex items-center gap-3 text-xs font-light tracking-[0.2em] uppercase text-gray-400 hover:text-gray-900 transition-colors w-fit"
-                  >
-                    Zur Website
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </a>
                 )}
               </div>
               
@@ -138,7 +132,7 @@ export default function WorkSlider({ works }: { works: any[] }) {
               }}
               className={`h-1.5 transition-all duration-500 rounded-full ${
                 idx === activeIndex 
-                  ? "w-8 bg-gray-900" 
+                  ? "w-8 bg-gray-500" 
                   : "w-1.5 bg-gray-300 hover:bg-gray-400"
               }`}
               aria-label={`Go to slide ${idx + 1}`}

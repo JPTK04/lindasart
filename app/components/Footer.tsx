@@ -4,13 +4,13 @@ import Link from "next/link";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Footer({ settings }: { settings: any }) {
   return (
-    <footer className="mt-24 py-16 border-t border-gray-100 text-sm opacity-80 font-sukhumvit">
+    <footer className="mt-24 py-16 border-t border-gray-100 text-sm font-sukhumvit">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left gap-12 md:gap-8">
 
         <div className="flex-1 flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-24">
           {/* Column 1: Contact */}
           <div className="leading-tight">
-            <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-900">Kontakt</h4>
+            <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-500">Kontakt</h4>
             {settings?.contactEmail && (
               <p className="text-gray-600">
                 <a href={`mailto:${settings.contactEmail}`} className="hover:text-gray-900 transition-colors">
@@ -36,7 +36,7 @@ export default function Footer({ settings }: { settings: any }) {
 
           {/* Column 2: Studio Address */}
           <div className="leading-tight">
-            <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-900">Studio</h4>
+            <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-500">Studio</h4>
             {settings?.address ? (
               <div className="text-gray-600 whitespace-pre-wrap">
                 {settings.address}
@@ -53,13 +53,13 @@ export default function Footer({ settings }: { settings: any }) {
 
         {/* Column 3: Legal */}
         <div className="md:text-right leading-tight mt-4 md:mt-0">
-          <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-900">Rechtliches</h4>
+          <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-500">Rechtliches</h4>
           <p className="text-gray-600">
             <Link href="/impressum" className="hover:text-gray-900 transition-colors">
               Impressum
             </Link>
           </p>
-          <p className="text-gray-400 mt-2 font-light">© {new Date().getFullYear()} Lindas Art</p>
+          <p className="text-gray-500 mt-2 font-light">© {new Date().getFullYear()} Lindas Art</p>
         </div>
 
       </div>

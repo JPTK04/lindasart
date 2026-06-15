@@ -42,7 +42,7 @@ export default async function EditorialDetailPage({ params }: PageProps) {
         </Link>
         
         <h1 
-          className="text-3xl md:text-4xl tracking-[0.2em] uppercase font-light mt-4 text-gray-900"
+          className="text-3xl md:text-4xl tracking-[0.2em] uppercase font-light mt-4 text-gray-500"
           style={{ fontFamily: '"Sukhumvit Set", sans-serif' }}
         >
           {data.title}
@@ -77,7 +77,7 @@ export default async function EditorialDetailPage({ params }: PageProps) {
           })}
         </div>
       ) : (
-        <div className="text-center text-gray-400 py-20 font-sans">
+        <div className="text-center text-gray-500 py-20 font-sans">
           Noch keine Bilder für dieses Galerie-Raster hochgeladen.
         </div>
       )}
