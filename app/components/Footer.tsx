@@ -18,7 +18,13 @@ export default function Footer({ settings }: { settings: any }) {
                 </a>
               </p>
             )}
-            {settings?.contactPhone && <p className="text-gray-600">{settings.contactPhone}</p>}
+            {settings?.contactPhone && (
+              <p className="text-gray-600">
+                <a href={`tel:${settings.contactPhone.replace(/[\s\(\)-]/g, '')}`} className="hover:text-gray-900 transition-colors">
+                  {settings.contactPhone}
+                </a>
+              </p>
+            )}
             {settings?.instagram && (
               <p className="mt-2 text-gray-600">
                 <a href={settings.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
