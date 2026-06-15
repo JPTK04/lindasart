@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function Footer({ settings }: { settings: any }) {
   return (
     <footer className="mt-24 py-16 border-t border-gray-100 text-sm opacity-80 font-sukhumvit">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left gap-12 md:gap-8">
 
-        <div className="flex-1 flex flex-col md:flex-row gap-12 md:gap-24">
+        <div className="flex-1 flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-24">
           {/* Column 1: Contact */}
           <div className="leading-tight">
             <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-900">Kontakt</h4>
@@ -22,7 +22,7 @@ export default function Footer({ settings }: { settings: any }) {
             {settings?.instagram && (
               <p className="mt-2 text-gray-600">
                 <a href={settings.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
-                  Instagram ↗
+                  Instagram
                 </a>
               </p>
             )}
@@ -46,7 +46,7 @@ export default function Footer({ settings }: { settings: any }) {
         </div>
 
         {/* Column 3: Legal */}
-        <div className="md:text-right leading-tight mt-12 md:mt-0">
+        <div className="md:text-right leading-tight mt-4 md:mt-0">
           <h4 className="font-semibold uppercase tracking-widest mb-3 font-ztneue text-gray-900">Rechtliches</h4>
           <p className="text-gray-600">
             <Link href="/impressum" className="hover:text-gray-900 transition-colors">

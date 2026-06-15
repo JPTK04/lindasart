@@ -28,7 +28,7 @@ export default function Header() {
           {/* We assume logo.png is in the public folder as requested */}
           <div
             className={`relative transition-all duration-300 ease-in-out ${
-              isScrolled ? "w-48 h-16" : "w-72 h-24"
+              isScrolled ? "w-40 h-14 md:w-48 md:h-16" : "w-48 h-16 md:w-72 md:h-24"
             }`}
           >
             <Image
@@ -40,7 +40,7 @@ export default function Header() {
             />
           </div>
         </Link>
-        <nav className="flex gap-8 text-base uppercase tracking-widest font-sukhumvit pb-1">
+        <nav className="flex gap-4 md:gap-8 text-base uppercase tracking-widest font-sukhumvit pb-1">
           <Link
             href="/work"
             className={`transition-colors hover:opacity-70 ${

@@ -53,19 +53,28 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               
               {/* Text underneath, exactly left-aligned */}
               <div className="mt-3 text-left">
-                <h3 className="font-ztneue font-bold text-[24px] text-gray-900 leading-tight">
-                  {title}
-                </h3>
-                {subtitle && (
-                  <p className="font-sukhumvit font-thin text-[20px] text-gray-600 mt-1 leading-normal">
-                    {subtitle}
-                  </p>
-                )}
+                <Link href={linkHref} className="group/link inline-flex flex-col items-start">
+                  <h3 className="font-ztneue font-bold text-[24px] text-gray-900 leading-tight group-hover/link:text-gray-600 transition-colors">
+                    {title}
+                  </h3>
+                  {subtitle && (
+                    <p className="font-sukhumvit font-thin text-[20px] text-gray-600 mt-1 leading-normal group-hover/link:text-gray-900 transition-colors">
+                      {subtitle}
+                    </p>
+                  )}
+                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-400 mt-3 group-hover/link:text-gray-900 transition-colors">
+                    Zur Galerie
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </div>
+                </Link>
               </div>
             </div>
 
             {/* Right Column: Landscape Image */}
-            <div>
+            <div className="hidden md:block">
               <Link 
                 href={linkHref} 
                 className="group block w-full bg-[#eae9e9] p-2 transition-colors hover:bg-[#d8d8d8]"
@@ -89,7 +98,7 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
         ) : (
           <>
             {/* Left Column: Landscape Image */}
-            <div className="order-2 md:order-1">
+            <div className="hidden md:block order-2 md:order-1">
               <Link 
                 href={linkHref} 
                 className="group block w-full bg-[#eae9e9] p-2 transition-colors hover:bg-[#d8d8d8]"
@@ -132,15 +141,24 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               </Link>
               
               {/* Text underneath, exactly right-aligned */}
-              <div className="mt-3 text-right">
-                <h3 className="font-ztneue font-bold text-[24px] text-gray-900 leading-tight">
-                  {title}
-                </h3>
-                {subtitle && (
-                  <p className="font-sukhumvit font-thin text-[20px] text-gray-600 mt-1 leading-normal">
-                    {subtitle}
-                  </p>
-                )}
+              <div className="mt-3 text-right flex justify-end">
+                <Link href={linkHref} className="group/link inline-flex flex-col items-end">
+                  <h3 className="font-ztneue font-bold text-[24px] text-gray-900 leading-tight group-hover/link:text-gray-600 transition-colors">
+                    {title}
+                  </h3>
+                  {subtitle && (
+                    <p className="font-sukhumvit font-thin text-[20px] text-gray-600 mt-1 leading-normal group-hover/link:text-gray-900 transition-colors">
+                      {subtitle}
+                    </p>
+                  )}
+                  <div className="flex items-center gap-2 text-xs font-light tracking-[0.2em] uppercase text-gray-400 mt-3 group-hover/link:text-gray-900 transition-colors">
+                    Zur Galerie
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </div>
+                </Link>
               </div>
             </div>
           </>

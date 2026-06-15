@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function WorkSlider({ works }: { works: any[] }) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -15,13 +16,23 @@ export default function WorkSlider({ works }: { works: any[] }) {
     }
   };
 
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const scrollPosition = scrollRef.current.scrollLeft;
+      const slideWidth = scrollRef.current.scrollWidth / works.length;
+      // Use Math.round to find the slide closest to the current scroll position
+      const newIndex = Math.max(0, Math.min(works.length - 1, Math.round(scrollPosition / slideWidth)));
+      setActiveIndex(newIndex);
+    }
+  };
+
   if (!works || works.length === 0) return null;
 
   return (
     <div className="relative mb-32 group">
       {/* Navigation Arrows */}
       {works.length > 1 && (
-        <div className="absolute top-[50%] -translate-y-1/2 left-0 right-0 z-10 flex justify-between pointer-events-none px-0 md:-mx-8">
+        <div className="absolute top-[50%] -translate-y-1/2 left-0 right-0 z-10 hidden md:flex justify-between pointer-events-none px-0 md:-mx-8">
           <button 
             onClick={() => scroll("left")}
             className="w-12 h-16 flex items-center justify-center text-gray-300 hover:text-gray-900 transition-colors pointer-events-auto"
@@ -46,6 +57,7 @@ export default function WorkSlider({ works }: { works: any[] }) {
       {/* Slider Container */}
       <div 
         ref={scrollRef}
+        onScroll={handleScroll}
         className="flex overflow-x-auto gap-8 snap-x snap-mandatory pb-8 scrollbar-hide"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
@@ -59,7 +71,7 @@ export default function WorkSlider({ works }: { works: any[] }) {
                   src={work.imageUrl}
                   alt={work.title || `Featured Work ${idx + 1}`}
                   fill
-                  className={`object-cover transition-transform duration-1000 ease-out ${hasUrl ? 'group-hover/img:scale-[1.03]' : ''}`}
+                  className="object-cover"
                   unoptimized
                 />
               )}
@@ -111,6 +123,29 @@ export default function WorkSlider({ works }: { works: any[] }) {
           );
         })}
       </div>
+
+      {/* Pagination Dots */}
+      {works.length > 1 && (
+        <div className="flex justify-center gap-3 mt-4">
+          {works.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => {
+                if (scrollRef.current) {
+                  const slideWidth = scrollRef.current.scrollWidth / works.length;
+                  scrollRef.current.scrollTo({ left: slideWidth * idx, behavior: "smooth" });
+                }
+              }}
+              className={`h-1.5 transition-all duration-500 rounded-full ${
+                idx === activeIndex 
+                  ? "w-8 bg-gray-900" 
+                  : "w-1.5 bg-gray-300 hover:bg-gray-400"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
