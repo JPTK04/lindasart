@@ -87,17 +87,17 @@ export default function WorkSlider({ works }: { works: any[] }) {
               <div className="w-full md:w-1/3 lg:w-1/4 flex flex-col justify-center order-2 md:order-1">
                 {hasUrl ? (
                   <a href={work.url} target="_blank" rel="noopener noreferrer" className="group/link w-fit">
-                    <h2 className="font-ztneue text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
+                    <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
                       {work.title}
                     </h2>
                   </a>
                 ) : (
-                  <h2 className="font-ztneue text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight">
+                  <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-4 leading-tight">
                     {work.title}
                   </h2>
                 )}
                 {work.description && (
-                  <p className="text-gray-500 font-light leading-relaxed mb-8 whitespace-pre-wrap">
+                  <p className="font-ztneue font-bold text-gray-500 text-lg leading-relaxed mb-8 whitespace-pre-wrap">
                     {work.description}
                   </p>
                 )}

@@ -54,11 +54,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               {/* Text underneath, exactly left-aligned */}
               <div className="mt-3 text-left">
                 <Link href={linkHref} className="group/link inline-flex flex-col items-start">
-                  <h3 className="font-ztneue font-bold text-[24px] text-gray-500 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
+                  <h3 className="font-sukhumvit font-thin text-[24px] tracking-widest uppercase text-gray-500 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-sukhumvit font-thin text-[20px] text-gray-600 mt-1 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-2 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
@@ -136,11 +136,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               {/* Text underneath, exactly right-aligned */}
               <div className="mt-3 text-right flex justify-end">
                 <Link href={linkHref} className="group/link inline-flex flex-col items-end">
-                  <h3 className="font-ztneue font-bold text-[24px] text-gray-500 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
+                  <h3 className="font-sukhumvit font-thin text-[24px] tracking-widest uppercase text-gray-500 leading-tight transition-colors underline decoration-[1px] underline-offset-8 decoration-gray-300 group-hover/link:text-gray-900 group-hover/link:decoration-gray-900">
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-sukhumvit font-thin text-[20px] text-gray-600 mt-1 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-2 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
