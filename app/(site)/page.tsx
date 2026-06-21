@@ -61,8 +61,8 @@ export default async function Home() {
                       alt={item.title || "Series Cover"}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="100vw"
                       priority
-                      unoptimized
                     />
                   )}
                   {/* Optional overlay on hover */}

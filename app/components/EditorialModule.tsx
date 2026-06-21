@@ -44,16 +44,16 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                       alt={title}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       priority
-                      unoptimized
                     />
                   )}
                 </div>
               </Link>
               
-              {/* Text underneath, exactly left-aligned (MOBILE ONLY) */}
-              <div className="mt-3 text-left block md:hidden">
-                <Link href={linkHref} className="group/link inline-flex flex-col items-start">
+              {/* Text underneath, always right-aligned on mobile */}
+              <div className="mt-3 text-right flex md:hidden justify-end">
+                <Link href={linkHref} className="group/link inline-flex flex-col items-end">
                   <h3 className="font-ztneue font-normal text-[18px] md:text-[20px] tracking-widest uppercase text-gray-500 leading-tight transition-colors group-hover/link:text-gray-900">
                     {title}
                   </h3>
@@ -87,8 +87,8 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                       alt={title}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       priority
-                      unoptimized
                     />
                   )}
                 </div>
@@ -132,8 +132,8 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                       alt={title}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       priority
-                      unoptimized
                     />
                   )}
                 </div>
@@ -175,8 +175,8 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
                       alt={title}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       priority
-                      unoptimized
                     />
                   )}
                 </div>

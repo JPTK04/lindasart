@@ -72,7 +72,7 @@ export default function WorkSlider({ works }: { works: any[] }) {
                   alt={work.title || `Featured Work ${idx + 1}`}
                   fill
                   className="object-cover"
-                  unoptimized
+                  sizes="(max-width: 768px) 100vw, 66vw"
                 />
               )}
             </div>

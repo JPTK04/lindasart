@@ -70,7 +70,7 @@ export default async function EditorialDetailPage({ params }: PageProps) {
                 className="break-inside-avoid mb-8 overflow-hidden bg-gray-50 relative"
               >
                 <img
-                  src={urlFor(image).url()}
+                  src={urlFor(image).width(1000).auto('format').url()}
                   alt={`${data.title} - Masonry ${index + 1}`}
                   className="w-full h-auto object-cover"
                   loading="lazy"
