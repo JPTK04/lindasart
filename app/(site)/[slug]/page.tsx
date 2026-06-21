@@ -3,6 +3,7 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PortableText } from '@portabletext/react';
 
 export const revalidate = 60;
 
@@ -11,7 +12,9 @@ const QUERY = `*[_type == "homePage"][0].modules[_type == "editorialModule" && s
   subtitle,
   imageLeft,
   imageRight,
-  masonryImages
+  masonryImages,
+  personalInfo,
+  reviews
 }`;
 
 interface PageProps {
@@ -58,13 +61,13 @@ export default async function EditorialDetailPage({ params }: PageProps) {
       </div>
 
       {images.length > 0 ? (
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-8">
           {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {images.map((image: any, index: number) => {
             return (
               <div 
                 key={index} 
-                className="break-inside-avoid overflow-hidden bg-gray-50 relative"
+                className="break-inside-avoid mb-8 overflow-hidden bg-gray-50 relative"
               >
                 <img
                   src={urlFor(image).url()}
@@ -79,6 +82,22 @@ export default async function EditorialDetailPage({ params }: PageProps) {
       ) : (
         <div className="text-center text-gray-500 py-20 font-sans">
           Noch keine Bilder für dieses Galerie-Raster hochgeladen.
+        </div>
+      )}
+
+      {/* Info & Reviews Section */}
+      {(data.personalInfo || data.reviews) && (
+        <div className={`mt-20 grid grid-cols-1 ${data.personalInfo && data.reviews ? 'md:grid-cols-2' : ''} gap-12 border-t border-gray-100 pt-16`}>
+          {data.personalInfo && (
+            <div className="prose prose-gray prose-a:text-gray-900 font-sans font-light text-gray-500">
+              <PortableText value={data.personalInfo} />
+            </div>
+          )}
+          {data.reviews && (
+            <div className="prose prose-gray prose-a:text-gray-900 font-sans font-light text-gray-500">
+              <PortableText value={data.reviews} />
+            </div>
+          )}
         </div>
       )}
     </div>

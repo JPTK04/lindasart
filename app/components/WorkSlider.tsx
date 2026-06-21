@@ -84,20 +84,20 @@ export default function WorkSlider({ works }: { works: any[] }) {
               className="flex-shrink-0 w-full snap-center flex flex-col md:flex-row gap-8 lg:gap-16 items-center px-4"
             >
               {/* Text Container - Left side */}
-              <div className="w-full md:w-1/3 lg:w-1/4 flex flex-col justify-center order-2 md:order-1">
+              <div className="w-full md:w-2/5 lg:w-1/3 flex flex-col justify-center order-2 md:order-1 min-w-0">
                 {hasUrl ? (
-                  <a href={work.url} target="_blank" rel="noopener noreferrer" className="group/link w-fit">
-                    <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-0 leading-tight transition-colors whitespace-nowrap group-hover/link:text-gray-900">
+                  <a href={work.url} target="_blank" rel="noopener noreferrer" className="group/link w-fit max-w-full">
+                    <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-0 leading-tight transition-colors break-words group-hover/link:text-gray-900">
                       {work.title}
                     </h2>
                   </a>
                 ) : (
-                  <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-0 leading-tight whitespace-nowrap">
+                  <h2 className="font-sukhumvit font-thin tracking-widest uppercase text-2xl md:text-3xl lg:text-4xl text-gray-500 mb-0 leading-tight break-words">
                     {work.title}
                   </h2>
                 )}
                 {work.description && (
-                  <p className="font-ztneue font-bold text-gray-500 text-lg leading-relaxed mb-3 whitespace-pre-wrap">
+                  <p className="font-sans font-light text-gray-500 text-sm md:text-base leading-relaxed mb-3 whitespace-pre-wrap">
                     {work.description}
                   </p>
                 )}
@@ -118,7 +118,7 @@ export default function WorkSlider({ works }: { works: any[] }) {
               </div>
               
               {/* Image Container - Right side */}
-              <div className="w-full md:w-2/3 lg:w-3/4 aspect-[4/3] relative order-1 md:order-2">
+              <div className="w-full md:w-3/5 lg:w-2/3 aspect-[4/3] relative order-1 md:order-2">
                 {hasUrl ? (
                   <a href={work.url} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                     {ImageComponent}

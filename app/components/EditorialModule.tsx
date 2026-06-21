@@ -17,7 +17,7 @@ interface EditorialModuleProps {
 
 export default function EditorialModule({ module }: EditorialModuleProps) {
   const { title, subtitle, slug, variant, imageLeft, imageRight } = module;
-  const linkHref = `/editorial/${slug?.current || slug}`;
+  const linkHref = `/${slug?.current || slug}`;
 
   const isLeft = variant === "left";
 
@@ -54,11 +54,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               {/* Text underneath, exactly left-aligned (MOBILE ONLY) */}
               <div className="mt-3 text-left block md:hidden">
                 <Link href={linkHref} className="group/link inline-flex flex-col items-start">
-                  <h3 className="font-sukhumvit font-thin text-[24px] tracking-widest uppercase text-gray-500 leading-tight transition-colors whitespace-nowrap group-hover/link:text-gray-900">
+                  <h3 className="font-ztneue font-normal text-[18px] md:text-[20px] tracking-widest uppercase text-gray-500 leading-tight transition-colors group-hover/link:text-gray-900">
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-0 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-sukhumvit font-light text-[14px] md:text-[16px] tracking-widest uppercase text-gray-600 mt-1 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
@@ -97,11 +97,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               {/* Text underneath, exactly left-aligned (DESKTOP ONLY) */}
               <div className="mt-3 text-left">
                 <Link href={linkHref} className="group/link inline-flex flex-col items-start">
-                  <h3 className="font-sukhumvit font-thin text-[24px] tracking-widest uppercase text-gray-500 leading-tight transition-colors whitespace-nowrap group-hover/link:text-gray-900">
+                  <h3 className="font-sukhumvit font-thin text-[18px] md:text-[20px] tracking-widest uppercase text-gray-500 leading-tight transition-colors group-hover/link:text-gray-900">
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-0 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[14px] md:text-[16px] text-gray-600 mt-1 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
@@ -142,11 +142,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               {/* Text underneath, exactly right-aligned (DESKTOP ONLY) */}
               <div className="mt-3 text-right flex justify-end">
                 <Link href={linkHref} className="group/link inline-flex flex-col items-end">
-                  <h3 className="font-sukhumvit font-thin text-[24px] tracking-widest uppercase text-gray-500 leading-tight transition-colors whitespace-nowrap group-hover/link:text-gray-900">
+                  <h3 className="font-sukhumvit font-thin text-[18px] md:text-[20px] tracking-widest uppercase text-gray-500 leading-tight transition-colors group-hover/link:text-gray-900">
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-0 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[14px] md:text-[16px] text-gray-600 mt-1 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}
@@ -185,11 +185,11 @@ export default function EditorialModule({ module }: EditorialModuleProps) {
               {/* Text underneath, exactly right-aligned (MOBILE ONLY) */}
               <div className="mt-3 text-right flex md:hidden justify-end">
                 <Link href={linkHref} className="group/link inline-flex flex-col items-end">
-                  <h3 className="font-sukhumvit font-thin text-[24px] tracking-widest uppercase text-gray-500 leading-tight transition-colors whitespace-nowrap group-hover/link:text-gray-900">
+                  <h3 className="font-sukhumvit font-thin text-[18px] md:text-[20px] tracking-widest uppercase text-gray-500 leading-tight transition-colors group-hover/link:text-gray-900">
                     {title}
                   </h3>
                   {subtitle && (
-                    <p className="font-ztneue font-bold text-[20px] text-gray-600 mt-0 leading-normal group-hover/link:text-gray-900 transition-colors">
+                    <p className="font-ztneue font-bold text-[14px] md:text-[16px] text-gray-600 mt-1 leading-normal group-hover/link:text-gray-900 transition-colors">
                       {subtitle}
                     </p>
                   )}

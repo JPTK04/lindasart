@@ -35,6 +35,7 @@ export default function Header() {
               src="/logo.png"
               alt="Lindas Art Logo"
               fill
+              sizes="(max-width: 768px) 160px, 288px"
               className="object-contain object-left"
               priority
             />

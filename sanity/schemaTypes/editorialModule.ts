@@ -63,6 +63,18 @@ export const editorialModule = defineType({
         layout: 'grid',
       },
     }),
+    defineField({
+      name: 'personalInfo',
+      title: 'Persönliche Info unter der Galerie',
+      type: 'array',
+      of: [{ type: 'block' }],
+    }),
+    defineField({
+      name: 'reviews',
+      title: 'Rezensionen unter der Galerie',
+      type: 'array',
+      of: [{ type: 'block' }],
+    }),
   ],
   preview: {
     select: {
